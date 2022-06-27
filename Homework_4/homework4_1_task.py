@@ -41,4 +41,3 @@ print(f'The number of words that contain 2 vowels in a row: {len(result_words_se
     break, 
 що дозволило б уникнути повторень слів у списку і не потрібно було робити перетворення списку в set().
 """
-
