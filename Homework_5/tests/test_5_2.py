@@ -22,3 +22,4 @@ def test_convert_argument_to_float_positive(value, return_float_zero):
 def test_convert_argument_to_float_negative():
     with pytest.raises(TypeError):
         convert_argument_to_float()
+
