@@ -14,3 +14,4 @@ print(transform_age_ending(user_age))
 
 # Prints the relevant cashier respond that depends on the inputted user age
 print(check_user_age(user_age))
+
