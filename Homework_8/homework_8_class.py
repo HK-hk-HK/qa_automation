@@ -129,8 +129,8 @@ class Vehicle:
             self.__tank_level = self.__tank_level + fuel_to_full
             print(f'{self.producer} {self.model} says to {other.producer} {other.model}: '
                   f'"Thanks, buddy, you rescued me. You shared in {fuel_to_full} liters of fuel with me"')
-            # print(f'{other.producer} {other.model} says to {self.producer} {self.model}: '
-            #       f'"No problem, bro. You left me with {other.__tank_level} litres of fuel"')
+            print(f'{other.producer} {other.model} says to {self.producer} {self.model}: '
+                  f'"No problem, bro. You left me with {other.__tank_level} litres of fuel"')
 
     @property
     def tank_level(self):
