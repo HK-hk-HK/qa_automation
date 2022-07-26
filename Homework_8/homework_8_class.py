@@ -66,6 +66,17 @@ class Vehicle:
         return f'{self.producer} {self.model} released at {self.year} has ' \
                f'{self.__odometer_value} odometer value'
 
+    def __eq__(self, other) -> bool:
+        """
+        Helps to define equality of '''year''' and '''__odometer_value''' comparing Vehicle self and other instances
+
+        :param other: other Vehicle class object
+        :return: boolean depending on compared self and other instances '''year''' and '''__odometer_value'''
+        """
+        if self.year == other.year and self.__odometer_value == other.__odometer_value:
+            return True
+        return False
+
     def refueling(self):
         """
         Doesn't take any arguments fills the tank to full by equating the capacity of Vehicle's tank.
@@ -150,16 +161,6 @@ class Vehicle:
             print(f'{other.producer} {other.model} says to {self.producer} {self.model}: '
                   f'"No problem, bro. You left me with {other.__tank_level} litres of fuel"')
 
-    def __eq__(self, other) -> bool:
-        """
-        Helps to define equality of '''year''' and '''__odometer_value''' comparing Vehicle self and other instances
-
-        :param other: other Vehicle class object
-        :return: boolean depending on compared self and other instances '''year''' and '''__odometer_value'''
-        """
-        if self.year == other.year and self.__odometer_value == other.__odometer_value:
-            return True
-        return False
 
 
 
