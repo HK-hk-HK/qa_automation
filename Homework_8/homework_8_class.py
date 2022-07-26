@@ -38,6 +38,24 @@ class Vehicle:
         self.max_speed = max_speed
         self.fuel_consumption = fuel_consumption
 
+    @property
+    def tank_level(self):
+        """
+        This method is declared as property in order to get info of private property '''--tank_level'''
+
+        :return: value of private property '''--tank_level'''
+        """
+        return self.__tank_level
+
+    @property
+    def mileage(self) -> int:
+        """
+        This method is declared as property in order to get info of private property '''__odometer_value'''
+
+        :return: value of private property '''__odometer_value'''
+        """
+        return int(self.__odometer_value)
+
     def __repr__(self) -> str:
         """
         Doesn't take any arguments and generates main description about declared class object
@@ -131,24 +149,6 @@ class Vehicle:
                   f'"Thanks, buddy, you rescued me. You shared in {fuel_to_full} liters of fuel with me"')
             print(f'{other.producer} {other.model} says to {self.producer} {self.model}: '
                   f'"No problem, bro. You left me with {other.__tank_level} litres of fuel"')
-
-    @property
-    def tank_level(self):
-        """
-        This method is declared as property in order to get info of private property '''--tank_level'''
-
-        :return: value of private property '''--tank_level'''
-        """
-        return self.__tank_level
-
-    @property
-    def mileage(self) -> int:
-        """
-        This method is declared as property in order to get info of private property '''__odometer_value'''
-
-        :return: value of private property '''__odometer_value'''
-        """
-        return int(self.__odometer_value)
 
     def __eq__(self, other) -> bool:
         """
