@@ -12,12 +12,12 @@ from Homework_11.Human.Staff.SubStaff.student import Student
 fake = Faker()
 
 if __name__ == '__main__':
-    student1 = Student(fake.unique.first_name(), fake.unique.last_name(), 'student', date(2001, 12, 15), 1)
-    student2 = Student(fake.unique.first_name(), fake.unique.last_name(), 'student', date(2004, 2, 5), 1)
-    student3 = Student(fake.unique.first_name(), fake.unique.last_name(), 'student', date(2006, 3, 6), 1)
-    student4 = Student(fake.unique.first_name(), fake.unique.last_name(), 'student', date(2009, 10, 1), 5)
-    student5 = Student(fake.unique.first_name(), fake.unique.last_name(), 'student', date(2008, 11, 2), 4)
-    student6 = Student(fake.unique.first_name(), fake.unique.last_name(), 'student', date(2010, 12, 3), 3)
+    student1 = Student(fake.unique.first_name(), fake.unique.last_name(), date(2001, 12, 15), 1)
+    student2 = Student(fake.unique.first_name(), fake.unique.last_name(), date(2004, 2, 5), 1)
+    student3 = Student(fake.unique.first_name(), fake.unique.last_name(), date(2006, 3, 6), 1)
+    student4 = Student(fake.unique.first_name(), fake.unique.last_name(), date(2009, 10, 1), 5)
+    student5 = Student(fake.unique.first_name(), fake.unique.last_name(), date(2008, 11, 2), 4)
+    student6 = Student(fake.unique.first_name(), fake.unique.last_name(), date(2010, 12, 3), 3)
 
     class_teacher1 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'class teacher1', date(1989, 1, 1), 20000)
     class_teacher2 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'class teacher2', date(1982, 11, 12), 20000)
@@ -40,21 +40,21 @@ if __name__ == '__main__':
     group3.add_student(student6)
     print(group3)
 
-    director1 = Director(fake.unique.first_name(), fake.unique.last_name(), 'Director1', date(1975, 11, 14), 50000)
-    director2 = Director(fake.unique.first_name(), fake.unique.last_name(), 'Director2', date(1988, 7, 9), 45000)
+    director1 = Director(fake.unique.first_name(), fake.unique.last_name(), date(1975, 11, 14), 50000)
+    director2 = Director(fake.unique.first_name(), fake.unique.last_name(), date(1988, 7, 9), 45000)
 
-    print(director1)
+    print(director1.__dict__)
     print(director2)
 
-    head_teacher1 = HeadTeacher(fake.unique.first_name(), fake.unique.last_name(), 'Head teacher1', date(1980, 5, 23), 30000)
-    head_teacher2 = HeadTeacher(fake.unique.first_name(), fake.unique.last_name(), 'Head teacher2', date(1981, 6, 24), 25000)
+    head_teacher1 = HeadTeacher(fake.unique.first_name(), fake.unique.last_name(), date(1980, 5, 23), 30000)
+    head_teacher2 = HeadTeacher(fake.unique.first_name(), fake.unique.last_name(), date(1981, 6, 24), 25000)
 
     print(head_teacher1)
     print(head_teacher2)
 
     teacher1 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'Math teacher', date(1995, 9, 12), 25000)
     teacher2 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'Chemistry teacher', date(1990, 7, 22), 25000)
-    teacher3 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'Music teacher', date(1991, 3, 5), 25000)
+    teacher3 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'Music Teacher', date(1991, 3, 5), 25000)
     teacher4 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'To remove teacher', date(1992, 5, 9), 1000)
 
     print(teacher1, teacher2, teacher3, teacher4)
@@ -117,5 +117,6 @@ if __name__ == '__main__':
 
     print(school1.__dict__)
     print(teacher1.__dict__)
+
 
 

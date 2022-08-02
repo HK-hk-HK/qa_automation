@@ -12,7 +12,7 @@ misha.stand()
 misha.lie()
 print(Human.humans_population)
 
-# uncomment 13 and 14 if you want to delete misha - Human's class object :'(
+# uncomment 16 and 17 if you want to delete misha - Human's class object :'(
 # del misha
 # print(misha)
 

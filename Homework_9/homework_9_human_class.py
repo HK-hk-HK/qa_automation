@@ -50,7 +50,7 @@ class Human:
     @property
     def birth_date(self) -> date:
         """
-        Displayes actual class object's age
+        Displays actual class object's age
 
         :return: actual age in type int
         """
