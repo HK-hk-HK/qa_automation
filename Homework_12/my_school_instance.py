@@ -1,13 +1,13 @@
 from datetime import date
 from faker import Faker
 
-from Homework_11.School.school import School
-from Homework_11.Group.group import Group
-from Homework_11.Human.Staff.SubStaff.director import Director
-from Homework_11.Human.Staff.SubStaff.head_teacher import HeadTeacher
-from Homework_11.Human.Staff.SubStaff.teacher import Teacher
-from Homework_11.Human.Staff.SubStaff.other_staff import OtherStaff
-from Homework_11.Human.Staff.SubStaff.student import Student
+from Homework_12.Group.group import Group
+from Homework_12.Human.Staff.SubStaff.director import Director
+from Homework_12.Human.Staff.SubStaff.head_teacher import HeadTeacher
+from Homework_12.Human.Staff.SubStaff.other_staff import OtherStaff
+from Homework_12.Human.Staff.SubStaff.student import Student
+from Homework_12.Human.Staff.SubStaff.teacher import Teacher
+from Homework_12.School.school import School
 
 fake = Faker()
 
@@ -19,9 +19,9 @@ if __name__ == '__main__':
     student5 = Student(fake.unique.first_name(), fake.unique.last_name(), date(2008, 11, 2), 4)
     student6 = Student(fake.unique.first_name(), fake.unique.last_name(), date(2010, 12, 3), 3)
 
-    class_teacher1 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'class teacher1', date(1989, 1, 1), 20000)
-    class_teacher2 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'class teacher2', date(1982, 11, 12), 20000)
-    class_teacher3 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'class teacher3', date(1983, 1, 13), 20000)
+    class_teacher1 = Teacher(fake.unique.first_name(), fake.unique.last_name(), date(1989, 1, 1), 20000, 'class teacher1')
+    class_teacher2 = Teacher(fake.unique.first_name(), fake.unique.last_name(), date(1982, 11, 12), 20000, 'class teacher2')
+    class_teacher3 = Teacher(fake.unique.first_name(), fake.unique.last_name(), date(1983, 1, 13), 20000, 'class teacher2')
 
     group1 = Group(class_teacher1)
     group2 = Group(class_teacher2)
@@ -52,16 +52,16 @@ if __name__ == '__main__':
     print(head_teacher1)
     print(head_teacher2)
 
-    teacher1 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'Math teacher', date(1995, 9, 12), 25000)
-    teacher2 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'Chemistry teacher', date(1990, 7, 22), 25000)
-    teacher3 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'Music Teacher', date(1991, 3, 5), 25000)
-    teacher4 = Teacher(fake.unique.first_name(), fake.unique.last_name(), 'To remove teacher', date(1992, 5, 9), 1000)
+    teacher1 = Teacher(fake.unique.first_name(), fake.unique.last_name(), date(1995, 9, 12), 25000, 'Math teacher')
+    teacher2 = Teacher(fake.unique.first_name(), fake.unique.last_name(), date(1990, 7, 22), 25000, 'Chemistry teacher')
+    teacher3 = Teacher(fake.unique.first_name(), fake.unique.last_name(), date(1991, 3, 5), 25000, 'Music Teacher')
+    teacher4 = Teacher(fake.unique.first_name(), fake.unique.last_name(), date(1992, 5, 9), 1000, 'To remove teacher')
 
     print(teacher1, teacher2, teacher3, teacher4)
 
-    other_staff1 = OtherStaff(fake.unique.first_name(), fake.unique.last_name(), 'Supply manager', date(1969, 10, 12), 10000)
-    other_staff2 = OtherStaff(fake.unique.first_name(), fake.unique.last_name(), 'Janitor1', date(1968, 6, 6), 7000)
-    other_staff3 = OtherStaff(fake.unique.first_name(), fake.unique.last_name(), 'To remove other staff', date(1992, 5, 9), 1000)
+    other_staff1 = OtherStaff(fake.unique.first_name(), fake.unique.last_name(), date(1969, 10, 12), 10000, 'Supply manager')
+    other_staff2 = OtherStaff(fake.unique.first_name(), fake.unique.last_name(), date(1968, 6, 6), 7000, 'Janitor1')
+    other_staff3 = OtherStaff(fake.unique.first_name(), fake.unique.last_name(), date(1992, 5, 9), 1000, 'To remove other staff')
 
     print(other_staff1, other_staff2, other_staff3)
 
@@ -80,7 +80,7 @@ if __name__ == '__main__':
     school1.add_other_staff(other_staff1)
     school1.add_other_staff(other_staff2)
     school1.add_other_staff(other_staff3)
-    school1.add_other_staff(other_staff=OtherStaff(fake.unique.first_name(), fake.unique.last_name(), 'Janitor2', date(1978, 7, 7), 7000))
+    school1.add_other_staff(other_staff=OtherStaff(fake.unique.first_name(), fake.unique.last_name(), date(1978, 7, 7), 7000, 'Janitor2'))
     print(school1.get_other_staff())
 
     school1.remove_other_staff(other_staff3)

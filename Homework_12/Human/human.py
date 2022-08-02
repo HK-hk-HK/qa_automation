@@ -2,7 +2,6 @@ from datetime import date
 
 
 class Human:
-    # methods
     def __init__(self, name: str, surname: str, birth_date: date):
         self.name = name
         self.surname = surname

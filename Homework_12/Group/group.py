@@ -1,5 +1,5 @@
-from Homework_11.Human.Staff.SubStaff.student import Student
-from Homework_11.Human.Staff.SubStaff.teacher import Teacher
+from Homework_12.Human.Staff.SubStaff.student import Student
+from Homework_12.Human.Staff.SubStaff.teacher import Teacher
 
 
 class Group:

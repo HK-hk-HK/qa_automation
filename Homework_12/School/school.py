@@ -1,10 +1,10 @@
 import math
 
-from Homework_11.Group.group import Group
-from Homework_11.Human.Staff.SubStaff.director import Director
-from Homework_11.Human.Staff.SubStaff.head_teacher import HeadTeacher
-from Homework_11.Human.Staff.SubStaff.other_staff import OtherStaff
-from Homework_11.Human.Staff.SubStaff.teacher import Teacher
+from Homework_12.Group.group import Group
+from Homework_12.Human.Staff.SubStaff.director import Director
+from Homework_12.Human.Staff.SubStaff.head_teacher import HeadTeacher
+from Homework_12.Human.Staff.SubStaff.other_staff import OtherStaff
+from Homework_12.Human.Staff.SubStaff.teacher import Teacher
 
 
 class School:

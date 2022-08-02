@@ -1,4 +1,4 @@
-from Homework_11.Human.human import Human
+from Homework_12.Human.human import Human
 from Homework_12.Human.Staff.staff import Staff
 from Homework_12.exceptions import InvalidRewardValueError
 
